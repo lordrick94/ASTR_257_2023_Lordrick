@@ -48,18 +48,6 @@ def process_image(filename, sub_bias:bool=True, normalize:bool=False,per_time:bo
     # Make fits file
     _ = make_fits(image,filename,outfile=outfile)
     print(f'Processed {filename}')
-
-    # Make logs
-    if outfile is None:
-        outfile = filename.replace('.fits','_reduced.fits')
-    log_file = outfile.replace('.fits','.log')
-    with open(log_file,'w') as f:
-        f.write(f'Processed {filename}\n')
-        f.write(f'Subtracted bias: {sub_bias}\n')
-        f.write(f'Normalized: {normalize}\n')
-        f.write(f'Exposure time: {exp_time}\n')
-        f.write(f'Output file: {outfile}\n')
-    print(f'Created log file {log_file}')
     
     return None
 
@@ -70,11 +58,11 @@ def process_all():
 
     # Process b_flats d2058,d2059,d2061
     for i in [2058,2059,2061]:
-        process_image(os.path.join(data_dir,f'd{i}.fits'),sub_bias=True,normalize=True,per_time=True,outfile=f'b_flat_d{i}.fits')
+        process_image(os.path.join(data_dir,f'd{i}.fits'),sub_bias=True,normalize=True,per_time=False,outfile=f'b_flat_d{i}.fits')
 
     # Process v_flats d2062,d2063,d2064
     for i in [2062,2063,2064]:
-        process_image(os.path.join(data_dir,f'd{i}.fits'),sub_bias=True,normalize=True,per_time=True,outfile=f'v_flat_d{i}.fits')
+        process_image(os.path.join(data_dir,f'd{i}.fits'),sub_bias=True,normalize=True,per_time=False,outfile=f'v_flat_d{i}.fits')
 
     # Process v_science images d2096 to d2098
     for i in range(2096,2098+1):
@@ -84,6 +72,13 @@ def process_all():
     for i in range(2099,2103+1):
         process_image(os.path.join(data_dir,f'd{i}.fits'),sub_bias=True,normalize=False,per_time=True,outfile=f'b_science_d{i}.fits')
 
+    # Process b_cluster images d2124 to d2128
+    for i in range(2124,2128+1):
+        process_image(os.path.join(data_dir,f'd{i}.fits'),sub_bias=True,normalize=False,per_time=True,outfile=f'b_cluster_d{i}.fits')
+
+    # Process v_cluster images d2121 to d2123
+    for i in range(2121,2123+1):
+        process_image(os.path.join(data_dir,f'd{i}.fits'),sub_bias=True,normalize=False,per_time=True,outfile=f'v_cluster_d{i}.fits')
 if __name__ == '__main__':
     process_all()
 

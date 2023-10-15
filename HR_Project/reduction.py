@@ -32,54 +32,38 @@ files = os.listdir(path)
 
 def spec_files(init:str='spec',files:list=files):
     """Returns the files that are spectra."""
-    my_files = [f for f in files if f.startswith('b_flat')]
+    my_files = [f for f in files if f.startswith(init)]
     work = get_data_median(my_files,frame_type=init)
     done_str = f'Processed {len(my_files)} of {init} files.'
     print(done_str)
     return work
 
-    inits = ['b_flat','v_flat']
-    for init in inits:
-        print(spec_files(init))
+# Median of b_flat files
+b_med = spec_files(init='b_flat')
 
+# Median of v_flat files
 
-def reduce_science_image(files:list=files):
-    """Reduces the science image."""
-    b_files = [f for f in files if f.startswith('b_science')]
-    v_files = [f for f in files if f.startswith('v_science')]
+v_med = spec_files(init='v_flat')
 
-    b_flat_med = spec_files(init='b_flat')
-    v_flat_med = spec_files(init='v_flat')
+# Replace all zeros with 1e-6
+b_med[b_med==0] = 1e-6
+v_med[v_med==0] = 1e-6
 
-
-    for f in b_files:
-        data = fits.open(f)[0].data
-        red_data = data/b_flat_med
-        make_fits(red_data,f,outfile=f.replace('.fits','_reduced.fits'))
-        print(f'Processed {f}')
-    for f in v_files:
-        data = fits.open(f)[0].data
-        red_data = data/v_flat_med
-        make_fits(red_data,f,outfile=f.replace('.fits','_reduced.fits'))
-        print(f'Processed {f}')
-
+# Divide science files by median of b_flat and v_flat
+def get_reduced_image(init:str='b_science',files:list=files,med_data=None):
+    """Returns the reduced image."""
+    my_files = [f for f in files if f.startswith(init)]
+    print(my_files)
+    init_data = [fits.open(f)[0].data/med_data for f in my_files]
+    data = np.stack(init_data,axis=0)
+    reduced = np.nanmedian(data,axis=0)
+    out = init + '_reduced.fits'
+    make_fits(reduced,my_files[0],outfile=out)
+    print(f'Reduced {init} files.')
     return None
 
-#List all files ending in reduced.fits
-def get_final_images(files:list=files):
-    reduced_files = [f for f in files if f.endswith('reduced.fits')]
-    #get median of reduced b_science files
-    b_reduced = [f for f in reduced_files if f.startswith('b_science')]
-    b_med = get_data_median(b_reduced,frame_type='b_science')
-
-    #get median of reduced v_science files
-    v_reduced = [f for f in reduced_files if f.startswith('v_science')]
-    v_med = get_data_median(v_reduced,frame_type='v_science')
-
-
-
 if __name__ == '__main__':
-    get_final_images()
-
-
-
+    get_reduced_image(init='b_science',med_data=b_med)
+    get_reduced_image(init='v_science',med_data=v_med)
+    get_reduced_image(init='b_cluster',med_data=b_med)
+    get_reduced_image(init='v_cluster',med_data=v_med)
