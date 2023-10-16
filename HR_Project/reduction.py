@@ -57,7 +57,8 @@ def get_reduced_image(init:str='b_science',files:list=files,med_data=None):
     init_data = [fits.open(f)[0].data/med_data for f in my_files]
     data = np.stack(init_data,axis=0)
     reduced = np.nanmedian(data,axis=0)
-    out = init + '_reduced.fits'
+    out_filename = init + '_reduced.fits'
+    out = os.path.join(path,'reduced_files',out_filename)
     make_fits(reduced,my_files[0],outfile=out)
     print(f'Reduced {init} files.')
     return None
