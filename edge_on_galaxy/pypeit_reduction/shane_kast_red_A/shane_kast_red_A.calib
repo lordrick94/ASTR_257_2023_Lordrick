@@ -1,0 +1,86 @@
+# Auto-generated calibration association file using PypeIt version:  1.14.0
+# UTC 2023-10-26T22:54:56.614
+# NOTE: DET01 is a placeholder for the reduced detectors/mosaics
+A:
+  --:
+    dichroic: d57
+    dispangle: 24903.0
+    dispname: 1200/5000
+  0:
+    arc:
+      proc:
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/pypeit_reduction/shane_kast_red_A/Calibrations/Arc_A_0_DET01.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/pypeit_reduction/shane_kast_red_A/Calibrations/WaveCalib_A_0_DET01.fits
+      raw:
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1000.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1001.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1002.fits
+    bias:
+      proc:
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/pypeit_reduction/shane_kast_red_A/Calibrations/Bias_A_0_DET01.fits
+      raw:
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1014.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1015.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1016.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1017.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1018.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1019.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1020.fits
+    illumflat:
+      proc:
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/pypeit_reduction/shane_kast_red_A/Calibrations/Flat_A_0_DET01.fits
+      raw:
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1003.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1004.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1005.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1006.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1007.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1008.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1009.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1010.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1011.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1012.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1013.fits
+    pixelflat:
+      proc:
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/pypeit_reduction/shane_kast_red_A/Calibrations/Flat_A_0_DET01.fits
+      raw:
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1003.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1004.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1005.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1006.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1007.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1008.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1009.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1010.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1011.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1012.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1013.fits
+    science:
+    - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1022.fits
+    - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1023.fits
+    - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1024.fits
+    tilt:
+      proc:
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/pypeit_reduction/shane_kast_red_A/Calibrations/Tiltimg_A_0_DET01.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/pypeit_reduction/shane_kast_red_A/Calibrations/Tilts_A_0_DET01.fits
+      raw:
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1000.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1001.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1002.fits
+    trace:
+      proc:
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/pypeit_reduction/shane_kast_red_A/Calibrations/Edges_A_0_DET01.fits.gz
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/pypeit_reduction/shane_kast_red_A/Calibrations/Slits_A_0_DET01.fits.gz
+      raw:
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1003.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1004.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1005.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1006.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1007.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1008.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1009.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1010.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1011.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1012.fits
+      - /home/lordrick/Documents/ASTRO_PHD_UCSC/Year_1_Astro_PHD/ASTR_257/Spectro_KAST/data/r1013.fits
