@@ -32,7 +32,7 @@ def grab_stars(file:str='b_science_reduced.fits'):
     df : pandas dataframe
         A dataframe with the x, y coordinates and the aperture sum of the stars in the image.
     """
-    F_h,bkg_factor,radius = 2.0, 2.0, 5.0
+    F_h,bkg_factor,radius = 10.0, 2.5, 2.0
     hdu = fits.open(file)
     image = hdu[0].data
 
@@ -65,7 +65,7 @@ df_star = df[(df['xcenter']>x) &
 
 L_b_star_sum = df['aperture_sum'][0].astype(float)
 
-m_ref = 10.382 #Known star
+m_ref = 10.382+1.959 #Known star
 F_ref = L_b_star_sum
 df_b_cluster = grab_stars('b_cluster_reduced.fits')
 
@@ -138,7 +138,7 @@ import matplotlib.pyplot as plt
 
 # Data
 x = df_final['m_B_x'] - df_final['m_V_y']
-y = df_final['m_B_x']
+y = df_final['m_V_y']
 
 # Create figure and axis
 fig, ax = plt.subplots(figsize=(10, 6))
@@ -150,7 +150,8 @@ ax.set_facecolor('lightgrey')
 # Labels, title, and grid
 ax.set_title('H-R Diagram for NGC7618', fontsize=16, fontweight='bold')
 ax.set_xlabel('$m_B - m_V$', fontsize=14)
-ax.set_ylabel('$m_B$', fontsize=14)
+ax.set_ylabel('$m_V$', fontsize=14)
+ax.set_ylim(ax.get_ylim()[::-1])
 ax.grid(True, linestyle='--', which='both', linewidth=0.5, alpha=0.7)
 
 # Tight layout
